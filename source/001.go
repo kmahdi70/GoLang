@@ -1,3 +1,7 @@
+/*
+By Mahdi Karimian
+kmahdi70@gmail.com
+*/
 package main
 
 import (
