@@ -3,13 +3,14 @@ package main
 import (
 	"fmt"
 	"os"
+	// "os"
 )
 
 func main() {
-	s, sep := "", ""
-	for _, arg := range os.Args[1:] {
-		s += sep + arg
-		sep = " "
+	// arr := [5] string {1:"aaaa",2:"fff",3:"fgg"} 
+	for k,v:=range os.Args{
+		// fmt.Println("k=",k,",v=",v)
+		fmt.Printf("k=%d,v=%s(%T,%T)\n",k,v,k,v)
 	}
-	fmt.Println(s)
+	// fmt.Println(arr)
 }
