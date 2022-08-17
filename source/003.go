@@ -8,7 +8,9 @@ import (
 )
 
 func main() {
-	start := time.Now()
+	var start time.Time
+	start = time.Now()
+	fmt.Printf("type = %T",start)
 	for k,v:=range os.Args{
 		fmt.Printf("k=%d,v=%s(%T,%T)\n",k,v,k,v)
 	}
