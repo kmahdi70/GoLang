@@ -8,7 +8,7 @@ import (
 
 func main() {
 	fmt.Print("\033[H\033[2J")
-	fmt.Println("Enter String and 0 to exit:")
+	fmt.Println("Enter String in lines and \"0\" to exit:")
 	counts := make(map[string]int)
 	input := bufio.NewScanner(os.Stdin)
 	for input.Scan() {
@@ -17,7 +17,7 @@ func main() {
 			break
 		}
 	}
-	// NOTE: ignoring potential errors from input.Err()
+	fmt.Println("err = ",input.Err(),"------------")
 	for line, n := range counts {
 		if n > 1 {
 			fmt.Printf("%d\t%s\n", n, line)
