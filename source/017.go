@@ -2,10 +2,13 @@ package main
 
 import (
 	"fmt"
-	"mk"
-
 	"github.com/TwiN/go-color"
+	"mk"
 )
+
+var name []string
+var bdate []string
+var id_code []string
 
 func main() {
 	mk.Cls()
@@ -37,10 +40,6 @@ func main() {
 	println(color.InGreen("See You Later, Good Bye."))
 
 }
-
-var name []string
-var bdate []string
-var id_code []string
 
 func EnterData() {
 	mk.Cls()
@@ -127,9 +126,9 @@ func Search() {
 		mk.Cls()
 		print(color.InPurple("Enter Name:"))
 		fmt.Scan(&selected_item)
-		for k, v := range name {
-			if v == selected_item {
-				found_item = k
+		for key, val := range name {
+			if val == selected_item {
+				found_item = key
 			}
 		}
 		if found_item == -1 {
